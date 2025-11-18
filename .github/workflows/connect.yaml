@@ -9,6 +9,7 @@ on:
 env:
   
   AWS_REGION : "us-east-1"
+  AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
 
 permissions:
       id-token: write   # This is required for requesting the JWT
@@ -23,9 +24,9 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
-          role-to-assume: arn:aws:iam::765447043038:role/GitHubAction-AssumeRoleWithAction
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubAction-AssumeRoleWithAction
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          aws-region: "us-east-1"
+          aws-region:  ${{ env.AWS_REGION }}
           
       - name: Sts GetCallerIdentity
         run: |
