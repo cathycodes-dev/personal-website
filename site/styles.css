@@ -1,0 +1,57 @@
+/* Global Style */
+body {
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0b5394;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    color: #0b5394;
+    border-bottom: 2px solid #0b5394;
+    padding-bottom: 0.3rem;
+}
+
+/* Experience Lists */
+ul {
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
