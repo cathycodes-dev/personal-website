@@ -25,7 +25,7 @@ Initial Draft
 .
 ├── README.md
 ├── hooks/
-├── infrastructure/
+├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── outputs.tf
@@ -35,6 +35,7 @@ Initial Draft
 │   │   ├── route53/
 ├── site/
 │   ├── index.html
+│   ├── style.css
 │   └── assets/
 └── .github/
     └── workflows/
