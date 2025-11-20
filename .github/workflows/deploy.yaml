@@ -42,7 +42,6 @@ jobs:
         run: terraform init
         working-directory: ${{ env.working-directory }}
         env:
-          TF_CLI_ARGS_init: "-backend-config=role_arn=arn:aws:iam::$AWS_ACCOUNT_ID:role/GitHubAction-AssumeRoleWithAction -upgrade -reconfigure"
           TF_VAR_assume_role: "GitHubAction-AssumeRoleWithAction"
 
       - name: Terraform validate
