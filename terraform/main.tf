@@ -7,12 +7,7 @@ terraform {
   }
 }
 
-resource "aws_s3_bucket" "test" {
-  bucket = "test-terraform"
+provider "aws" {
+  region = "us-east-1"
 }
 
-resource "aws_s3_object_copy" "object" {
-    bucket = aws_s3_bucket.test.bucket
-    key = "index.html"
-    source = "./site/index.html"
-}

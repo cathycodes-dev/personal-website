@@ -28,19 +28,9 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Run Terrascan
-        id: terrascan
-        uses: accurics/terrascan-action@main
+      - uses: hashicorp/setup-terraform@v3
         with:
-          iac_type: "terraform"
-          iac_version: "v14"
-          policy_type: "aws"
-          only_warn: true
-          iac_dir: infrastructure
-
-      - uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 0.14.4
+          terraform_version: 1.14.0
 
       - name: Terraform Fmt
         id: fmt
@@ -107,3 +97,6 @@ jobs:
         working-directory: ${{ env.working-directory }}
         env:
           TF_VAR_assume_role: "GitHubAction-AssumeRoleWithAction"
+
+      - name: Sync Site to S3
+        run: aws s3 sync site/ s3://cathycodes.com --delete
