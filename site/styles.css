@@ -48,9 +48,14 @@ h2 {
     padding-bottom: 0.3rem;
 }
 
-/* Experience Lists */
-ul {
-    line-height: 1.6;
+.btn {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0b5394;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Footer */
@@ -61,15 +66,15 @@ ul {
     font-size: 0.9rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.5rem 0.9rem;
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: #0b5394;
-    text-decoration: none;
-    font-weight: 600;
+.footer img {
+    height: auto;
+    width: 30px;
 }
+
+.footer a {
+    text-decoration: none;
+}
+
 
 /* ---------------------- */
 /* NAVIGATION BAR STYLES  */
@@ -88,6 +93,8 @@ ul {
     font-weight: bold;
     color: white;
     text-decoration: none;
+    padding: 10px;
+    border: 2px solid #ffffff;
 }
 
 /* Desktop nav links */
