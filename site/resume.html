@@ -15,6 +15,11 @@
       document.getElementById("nav-bar").innerHTML = html;
     }
     loadHeader();
+    function toggleMenu(x) {
+      const nav = document.querySelector(".nav-links");
+      x.classList.toggle("change");
+      nav.classList.toggle("nav-open");
+    }
   </script>
 
   <body>

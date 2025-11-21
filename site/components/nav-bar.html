@@ -1,10 +1,10 @@
 <div class="nav-container">
   <a href="/" class="logo">Cathy Codes</a>
 
-  <button class="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
   </button>
 
   <!-- Navigation links -->
@@ -15,14 +15,3 @@
     <a href="contact.html">Contact</a>
   </nav>
 </div>
-
-<script>
-  window.initNav = function () {
-    const hamburger = document.querySelector(".hamburger");
-    const nav = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", () => {
-      nav.classList.toggle("nav-open");
-    });
-  };
-</script>
