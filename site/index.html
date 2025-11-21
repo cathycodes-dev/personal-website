@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cathy Codes | Home</title>
+    <title>Home | Cathy Codes</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
-    <header>
-      <h1>Cathy Lefebvre</h1>
-      <p>Data Engineer</p>
-      <p>Updated.1</p>
-    </header>
+  <header id="site-header" class="site-header"></header>
+  <script>
+    async function loadHeader() {
+      const res = await fetch("components/site-header.html");
+      const html = await res.text();
+      document.getElementById("site-header").innerHTML = html;
+    }
+    loadHeader();
+  </script>
 
+  <body>
     <div class="container">
+      <h1>Cathy Lefebvre</h1>
       <section id="about">
         <h2>About Me</h2>
         <p>

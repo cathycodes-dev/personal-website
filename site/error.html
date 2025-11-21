@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Cathy Codes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <header id="site-header" class="site-header"></header>
+  <script>
+    async function loadHeader() {
+      const res = await fetch("components/site-header.html");
+      const html = await res.text();
+      document.getElementById("site-header").innerHTML = html;
+    }
+    loadHeader();
+  </script>
+  <body>
+    <h1>404</h1>
+    <p>Oops! page not found.</p>
+    <p>Try returning to the <a href="/">homepage</a></p>
+  </body>
+</html>

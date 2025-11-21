@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume | Cathy Codes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <header id="site-header" class="site-header"></header>
+  <script>
+    async function loadHeader() {
+      const res = await fetch("components/site-header.html");
+      const html = await res.text();
+      document.getElementById("site-header").innerHTML = html;
+    }
+    loadHeader();
+  </script>
+
+  <body>
+    <main class="container pdf-wrapper" role="main">
+      <a
+        class="btn"
+        href="assets/resume.pdf"
+        target="_blank"
+        rel="noopener"
+        download
+        >Download PDF</a
+      >
+      <section aria-labelledby="resume-heading">
+        <h2 id="resume-heading">My Resume</h2>
+
+        <!-- Primary PDF embed using <object>. Fallback shows helpful instructions -->
+        <object
+          class="viewer"
+          data="assets/resume.pdf"
+          type="application/pdf"
+          aria-label="Resume PDF"
+        >
+          <!-- If <object> not supported, use an <iframe> fallback -->
+          <iframe class="viewer" src="assets/resume.pdf" title="Resume PDF">
+            <!-- Final fallback content for browsers that cannot display PDFs inline -->
+            <div class="fallback">
+              <p>
+                It looks like your browser cannot display PDFs inline. You can
+                <a href="assets/resume.pdf" target="_blank" rel="noopener"
+                  >open the PDF in a new tab</a
+                >
+                or download it using the button above.
+              </p>
+            </div>
+          </iframe>
+        </object>
+
+        <noscript>
+          <div class="fallback" style="margin-top: 1rem">
+            <p>
+              JavaScript appears to be disabled. Please download the resume:
+              <a href="assets/resume.pdf" download>Download resume (PDF)</a>
+            </p>
+          </div>
+        </noscript>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <span id="year"></span> Cathy Codes — All Rights Reserved
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
