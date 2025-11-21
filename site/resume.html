@@ -63,12 +63,14 @@
       </section>
     </main>
 
-    <footer class="footer">
-      © <span id="year"></span> Cathy Codes — All Rights Reserved
-    </footer>
-
+    <footer id="footer"></footer>
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      async function loadFooter() {
+        const res = await fetch("components/footer.html");
+        const html = await res.text();
+        document.getElementById("footer").innerHTML = html;
+      }
+      loadFooter();
     </script>
   </body>
 </html>

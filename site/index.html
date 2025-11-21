@@ -97,9 +97,14 @@
         </p>
       </section>
     </div>
-
-    <footer class="footer">
-      © <span id="year"></span> Cathy Codes — All Rights Reserved 2025
-    </footer>
+    <footer id="footer"></footer>
+    <script>
+      async function loadFooter() {
+        const res = await fetch("components/footer.html");
+        const html = await res.text();
+        document.getElementById("footer").innerHTML = html;
+      }
+      loadFooter();
+    </script>
   </body>
 </html>

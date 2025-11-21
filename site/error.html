@@ -21,4 +21,14 @@
     <p>Oops! page not found.</p>
     <p>Try returning to the <a href="/">homepage</a></p>
   </body>
+
+  <footer id="footer"></footer>
+  <script>
+    async function loadFooter() {
+      const res = await fetch("components/footer.html");
+      const html = await res.text();
+      document.getElementById("footer").innerHTML = html;
+    }
+    loadFooter();
+  </script>
 </html>
