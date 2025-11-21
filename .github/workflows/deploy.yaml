@@ -99,3 +99,6 @@ jobs:
 
       - name: Sync Site to S3
         run: aws s3 sync site/ s3://cathycodes.com --delete
+
+      - name: Invalidate current CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id E1SD6W87BWGMF7 --paths "/*"
