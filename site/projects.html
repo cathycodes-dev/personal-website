@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Cathy Codes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/simplified_site_logo.svg" type="img/svg" />
+  </head>
+
+  <header id="nav-bar" class="nav-bar"></header>
+  <script>
+    async function loadHeader() {
+      const res = await fetch("components/nav-bar.html");
+      const html = await res.text();
+      document.getElementById("nav-bar").innerHTML = html;
+    }
+    loadHeader();
+    function toggleMenu(x) {
+      const nav = document.querySelector(".nav-links");
+      x.classList.toggle("change");
+      nav.classList.toggle("nav-open");
+    }
+  </script>
+
+  <h1><em>PAGE IN DEVELOPMENT</em></h1>
+
+  <footer id="footer"></footer>
+  <script>
+    async function loadFooter() {
+      const res = await fetch("components/footer.html");
+      const html = await res.text();
+      document.getElementById("footer").innerHTML = html;
+    }
+    loadFooter();
+  </script>
+</html>
