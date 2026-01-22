@@ -25,7 +25,9 @@ header {
 
 /* Layout */
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 h1 {
@@ -39,16 +41,18 @@ h2 {
     color: var(--header);
     border-bottom: 2px solid var(--header);
     padding-bottom: 0.3rem;
+    text-align: left;
 }
 
 .btn {
     display: inline-block;
     padding: 0.5rem 0.9rem;
     border-radius: 6px;
-    background-color: var(--dark-background);
+    background-color: var(--logo-font);
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 22pt;
 }
 
 .position-line {
@@ -93,6 +97,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .nav-links a:hover {
@@ -112,8 +117,9 @@ h2 {
 
 .pdf-wrapper {
     max-width: 1000px;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
 }
 
 .pdf-actions {
@@ -167,7 +173,8 @@ h2 {
 @media (max-width: 700px) {
 
     .hamburger {
-        gap: 6px;
+        flex-direction: column;
+        gap: 4px;
         display: flex;
         background-color: var(--dark-background);
         padding: 1rem;
