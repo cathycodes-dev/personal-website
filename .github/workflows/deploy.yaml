@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: terraform-state-lock
+  cancel-in-progress: false # Do not interrupt running applies mid-write
+
 permissions:
   id-token: write
   contents: read
@@ -17,9 +21,10 @@ jobs:
       TF_WORKSPACE: my-workspace
       AWS_REGION: "us-east-1"
       AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+      
     steps:
       - name: Git clone the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v5.1.0
@@ -35,11 +40,12 @@ jobs:
       - name: Terraform Fmt
         id: fmt
         run: terraform fmt -check
+        working-directory: ${{ env.working-directory }}
         continue-on-error: false
 
       - name: Terraform init
         id: init
-        run: terraform init
+        run: terraform init -lock-timeout=2m
         working-directory: ${{ env.working-directory }}
         env:
           TF_VAR_assume_role: "GitHubAction-AssumeRoleWithAction"
@@ -47,6 +53,7 @@ jobs:
       - name: Terraform validate
         id: validate
         run: terraform validate
+        working-directory: ${{ env.working-directory }}
 
       - name: Terraform plan
         id: plan
