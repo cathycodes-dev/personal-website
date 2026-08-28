@@ -13,10 +13,14 @@ jobs:
       TF_WORKSPACE: my-workspace
       AWS_REGION: "us-east-1"
       AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-      
+
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.0
 
       - name: Terraform Fmt
         id: fmt
