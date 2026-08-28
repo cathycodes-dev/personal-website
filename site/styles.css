@@ -16,11 +16,9 @@
 /* Global Style */
 body {
     font-family: Calibri, sans-serif;
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
 }
 
 /* Header */
@@ -28,7 +26,7 @@ header {
     background-color: var(--background);
     font-weight: normal;
     font-family: CathyCodes, Calibri, sans-serif;
-    font-size: 24pt;
+    font-size: 2rem;
 }
 
 /* Layout */
@@ -41,7 +39,7 @@ header {
 h1 {
     margin: auto;
     color: var(--logo-font);
-    font-size: 60pt;
+    font-size: 4rem;
     text-align: center;
     font-weight: normal;
     font-family: CathyCodes, Calibri, sans-serif;
@@ -50,10 +48,15 @@ h1 {
 h2 {
     color: var(--header);
     border-bottom: 2px solid var(--header);
-    font-size: 30pt;
+    font-size: 2.5rem;
     text-align: left;
     font-weight: 600;
     font-family: CathyCodes, Calibri, sans-serif;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: .1rem 0;
 }
 
 .btn {
@@ -67,19 +70,18 @@ h2 {
     font-size: 22pt;
     font-family: CathyCodes, Calibri, sans-serif;
 }
-
-.position-line {
+.role-line {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
 }
 
-.position-line .left {
-    text-align: left;
-}
-
-.position-line .right {
-    text-align: right;
+.dates {
+    font-size: 1rem;
+    color: #6b7280;
+    white-space: nowrap;
+    font-style: italic;
 }
 
 /* Footer */
