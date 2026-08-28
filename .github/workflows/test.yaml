@@ -8,6 +8,12 @@ on:
 jobs: 
   validate:
     runs-on: ubuntu-latest
+    env:
+      working-directory: terraform
+      TF_WORKSPACE: my-workspace
+      AWS_REGION: "us-east-1"
+      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+      
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
