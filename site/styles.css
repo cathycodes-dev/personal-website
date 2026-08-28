@@ -101,6 +101,51 @@ h3 {
     text-decoration: none;
 }
 
+/*certifications*/
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.cert-badge {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.cert-badge-link:hover .cert-badge {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    flex: 1;
+}
+
+.cert-meta {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.verify-link {
+    font-size: 0.85rem;
+    color: var(--header);
+    text-decoration: none;
+}
+
+.verify-link:hover {
+    text-decoration: underline;
+}
+
 
 /* ---------------------- */
 /* NAVIGATION BAR STYLES  */
@@ -234,6 +279,17 @@ h3 {
 
     .change .bar3 {
         transform: translate(0, -8px) rotate(45deg);
+    }
+
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .cert-header {
+        flex-direction: column;
+        gap: 0.25rem;
     }
 
 }
