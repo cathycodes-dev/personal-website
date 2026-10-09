@@ -4,6 +4,12 @@ variable "site_bucket" {
   default     = "cathycodes.com"
 }
 
+variable "domain" {
+  description = "the domain name for the website"
+  type        = string
+  default     = "cathycodes.com"
+}
+
 variable "region" {
   description = "the AWS region"
   type        = string
