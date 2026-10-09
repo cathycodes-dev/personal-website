@@ -20,11 +20,15 @@ provider "aws" {
   }
 }
 
-# 1. Request Wildcard Certificate
+data "aws_route53_zone" "main" {
+  name         = var.domain
+  private_zone = false
+}
+
 resource "aws_acm_certificate" "wildcard_cert" {
   provider                  = aws.us_east_1
-  domain_name               = "cathycodes.com"
-  subject_alternative_names = ["*.cathycodes.com"]
+  domain_name               = var.domain
+  subject_alternative_names = ["*.${var.domain}"]
   validation_method         = "DNS"
 
   lifecycle {
@@ -32,7 +36,6 @@ resource "aws_acm_certificate" "wildcard_cert" {
   }
 }
 
-# 2. Route 53 DNS Validation Records
 resource "aws_route53_record" "cert_validation" {
   for_each = {
     for dvo in aws_acm_certificate.wildcard_cert.domain_validation_options : dvo.domain_name => {
@@ -50,7 +53,6 @@ resource "aws_route53_record" "cert_validation" {
   zone_id         = data.aws_route53_zone.main.zone_id
 }
 
-# 3. Validate Certificate
 resource "aws_acm_certificate_validation" "wildcard_cert" {
   provider                = aws.us_east_1
   certificate_arn         = aws_acm_certificate.wildcard_cert.arn
