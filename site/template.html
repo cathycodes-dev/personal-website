@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template | Cathy Codes</title>
-    <link rel="stylesheet" href="default_style.css" />
-    <link rel="icon" href="assets/codes_logos/simplified.png" />
-  </head>
 
-  <header id="nav-bar" class="nav-bar"></header>
-  <script>
-    async function loadHeader() {
-      const res = await fetch("components/nav-bar.html");
-      const html = await res.text();
-      document.getElementById("nav-bar").innerHTML = html;
-    }
-    loadHeader();
-    function toggleMenu(x) {
-      const nav = document.querySelector(".nav-links");
-      x.classList.toggle("change");
-      nav.classList.toggle("nav-open");
-    }
-  </script>
-  <footer id="footer"></footer>
-  <script>
-    async function loadFooter() {
-      const res = await fetch("components/footer.html");
-      const html = await res.text();
-      document.getElementById("footer").innerHTML = html;
-    }
-    loadFooter();
-  </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template | Cathy Codes</title>
+  <link rel="stylesheet" href="page_styles.css" />
+  <link rel="stylesheet" href="default_styles.css" />
+  <link rel="icon" href="assets/codes_logos/simplified.png" />
+</head>
+
+<header id="nav-bar" class="nav-bar"></header>
+<script>
+  async function loadHeader() {
+    const res = await fetch("components/nav-bar.html");
+    const html = await res.text();
+    document.getElementById("nav-bar").innerHTML = html;
+  }
+  loadHeader();
+  function toggleMenu(x) {
+    const nav = document.querySelector(".nav-links");
+    x.classList.toggle("change");
+    nav.classList.toggle("nav-open");
+  }
+</script>
+<footer id="footer"></footer>
+<script>
+  async function loadFooter() {
+    const res = await fetch("components/footer.html");
+    const html = await res.text();
+    document.getElementById("footer").innerHTML = html;
+  }
+  loadFooter();
+</script>
+
 </html>
