@@ -13,7 +13,6 @@
     src: url(assets/CathyCodes-1-Regular.otf);
 }
 
-/* Global Style */
 body {
     font-family: Calibri, sans-serif;
     font-size: 1.2rem;
@@ -21,7 +20,6 @@ body {
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: var(--background);
     font-weight: normal;
@@ -29,9 +27,8 @@ header {
     font-size: 2rem;
 }
 
-/* Layout */
 .container {
-    max-width: 1000px;
+    width: clamp(300px, 85vw, 1000px);
     margin: 0 auto;
     padding: 1rem;
 }
@@ -70,21 +67,12 @@ h3 {
     font-size: 22pt;
     font-family: CathyCodes, Calibri, sans-serif;
 }
-.role-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.25rem;
-}
 
-.dates {
-    font-size: 1rem;
-    color: #6b7280;
-    white-space: nowrap;
-    font-style: italic;
-}
 
-/* Footer */
+/* ------------------ */
+/* FOOTER STYLES      */
+/* ------------------ */
+
 .footer {
     text-align: center;
     padding: 1.5rem;
@@ -101,63 +89,17 @@ h3 {
     text-decoration: none;
 }
 
-/*certifications*/
-.cert-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-top: 1rem;
-}
-
-.cert-card {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0.5rem 0;
-}
-
-.cert-badge {
-    width: 100px;
-    height: auto;
-    transition: transform 0.2s ease;
-}
-
-.cert-badge-link:hover .cert-badge {
-    transform: scale(1.05);
-}
-
-.cert-info {
-    flex: 1;
-}
-
-.cert-meta {
-    margin: 0 0 0.5rem 0;
-    font-size: 0.85rem;
-    color: #4b5563;
-}
-
-.verify-link {
-    font-size: 0.85rem;
-    color: var(--header);
-    text-decoration: none;
-}
-
-.verify-link:hover {
-    text-decoration: underline;
-}
-
-
 /* ---------------------- */
 /* NAVIGATION BAR STYLES  */
 /* ---------------------- */
 
 .nav-container {
-    max-width: 1100px;
+    width: clamp(300px, 95vw, 1100px);
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 
 .nav-links a:hover {
@@ -165,35 +107,8 @@ h3 {
 }
 
 .logo {
-    width: 30vw;
-    max-width: 250px;
-    padding: 10px;
-}
-
-/* ---------------------- */
-/* PDF DISPLAY            */
-/* ---------------------- */
-
-
-.pdf-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
-    text-align: center;
-}
-
-.pdf-actions {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.viewer {
-    width: 100%;
-    min-height: 60vh;
-    border: 2px solid var(--title);
-    border-radius: 6px;
+    width: clamp(100px, 25vw, 250px);
+    padding: .5rem;
 }
 
 /* ------------------------- */
@@ -213,10 +128,6 @@ h3 {
         border-radius: 6px;
         text-decoration: none;
         font-weight: 500;
-    }
-
-    .viewer {
-        min-height: 600px;
     }
 
     /* Don't display hamburger bar on desktop */
@@ -280,16 +191,5 @@ h3 {
     .change .bar3 {
         transform: translate(0, -8px) rotate(45deg);
     }
-
-    .cert-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .cert-header {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
+    
 }

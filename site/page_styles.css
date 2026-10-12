@@ -1,0 +1,167 @@
+/* ---------------------- */
+/* HOME PAGE STYLES       */
+/* ---------------------- */
+.role-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.dates {
+    font-size: 1rem;
+    color: #6b7280;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+
+/* CERTIFICATIONS DISPLAY */
+
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.cert-badge {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.cert-badge-link:hover .cert-badge {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    flex: 1;
+}
+
+.cert-meta {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.verify-link {
+    font-size: 0.85rem;
+    color: var(--header);
+    text-decoration: none;
+}
+
+.verify-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------- */
+/* RESUME PAGE STYLES     */
+/* ---------------------- */
+
+
+.pdf-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.viewer {
+    width: 100%;
+    min-height: 60vh;
+    border: 2px solid var(--title);
+    border-radius: 6px;
+}
+
+/* ---------------------- */
+/* PROJECTS PAGE STYLES   */
+/* ---------------------- */
+
+.projects-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    
+    padding: 1.5rem;
+    min-height: 250px;
+    min-width: 280px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; 
+}
+.project-card h2,
+.project-card h3,
+.project-card p {
+    margin: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card p {
+    color: #4a5568;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+/* Specific state for placeholder */
+.project-card.coming-soon {
+    opacity: 0.75;
+    border-style: dashed;
+    justify-content: space-evenly;
+}
+
+/* ------------------------ */
+/* MOBILE SPECIFIC BEHAVIOR */
+/* ------------------------ */
+
+@media (max-width: 700px) {
+
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .cert-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+}
