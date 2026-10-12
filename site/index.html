@@ -1,170 +1,139 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Cathy Codes</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/codes_logos/simplified.png" />
-  </head>
-  <header id="nav-bar" class="nav-bar"></header>
-  <script>
-    async function loadHeader() {
-      const res = await fetch("components/nav-bar.html");
-      const html = await res.text();
-      document.getElementById("nav-bar").innerHTML = html;
-    }
-    loadHeader();
-    function toggleMenu(x) {
-      const nav = document.querySelector(".nav-links");
-      x.classList.toggle("change");
-      nav.classList.toggle("nav-open");
-    }
-  </script>
 
-  <body>
-    <div class="container">
-      <h1>Cathy Lefebvre</h1>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I am a data engineer with a Bachelor of Science in Computer Science
-          from the Georgia Institute of Technology and experience building
-          scalable, cloud-based data systems using AWS and Python. I have
-          designed and optimized data pipelines and backend solutions at
-          organizations including Georgia-Pacific, Worthix, and Booz Allen
-          Hamilton, where my work focused on event-driven automation,
-          configuration-based architecture, and high-performance data
-          integration.
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Cathy Codes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="default_style.css" />
+  <link rel="icon" href="assets/codes_logos/simplified.png" />
+</head>
+<header id="nav-bar" class="nav-bar"></header>
+<script>
+  async function loadHeader() {
+    const res = await fetch("components/nav-bar.html");
+    const html = await res.text();
+    document.getElementById("nav-bar").innerHTML = html;
+  }
+  loadHeader();
+  function toggleMenu(x) {
+    const nav = document.querySelector(".nav-links");
+    x.classList.toggle("change");
+    nav.classList.toggle("nav-open");
+  }
+</script>
 
-        <p>
-          My technical background includes strong proficiency in AWS (Glue,
-          Lambda, Step Functions, S3, EventBridge, DynamoDB, and Redshift),
-          Python (pandas, Flask, FastAPI), SQL, and Terraform, along with
-          experience using Docker, Git, and other modern development tools. I am
-          skilled in developing ETL processes, API integrations, and data
-          orchestration frameworks that enable efficient and reliable data flow
-          across complex systems.
-        </p>
-      </section>
+<body>
+  <div class="container">
+    <h1>Cathy Lefebvre</h1>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a data engineer with a Bachelor of Science in Computer Science
+        from the Georgia Institute of Technology and experience building
+        scalable, cloud-based data systems using AWS and Python. I have
+        designed and optimized data pipelines and backend solutions at
+        organizations including Georgia-Pacific, Worthix, and Booz Allen
+        Hamilton, where my work focused on event-driven automation,
+        configuration-based architecture, and high-performance data
+        integration.
+      </p>
 
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="cert-grid">
-          <div class="cert-card">
-            <a
-              href="https://www.credly.com/badges/28e4ff5c-919e-4d6c-92fe-1f310cd7097b/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-badge-link"
-            >
-              <img
-                src="assets/cert_logos/aws_data_engineer_associate.png"
-                alt="AWS Certified Data Engineer - Associate"
-                class="cert-badge"
-              />
-            </a>
-            <div class="cert-info">
-              <div class="role-line">
-                <h3>
-                  AWS Certified Data Engineer – Associate
-                </h3>
-                <span class="dates">October 2026</span>
-              </div>
-              <p class="cert-meta">
-                Credential ID: 28e4ff5c-919e-4d6c-92fe-1f310cd7097b
-              </p>
-              <a
-                href="https://www.credly.com/badges/28e4ff5c-919e-4d6c-92fe-1f310cd7097b/public_url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="verify-link"
-              >
-                Verify Credential &rarr;
-              </a>
+      <p>
+        My technical background includes strong proficiency in AWS (Glue,
+        Lambda, Step Functions, S3, EventBridge, DynamoDB, and Redshift),
+        Python (pandas, Flask, FastAPI), SQL, and Terraform, along with
+        experience using Docker, Git, and other modern development tools. I am
+        skilled in developing ETL processes, API integrations, and data
+        orchestration frameworks that enable efficient and reliable data flow
+        across complex systems.
+      </p>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/28e4ff5c-919e-4d6c-92fe-1f310cd7097b/public_url" target="_blank"
+            rel="noopener noreferrer" class="cert-badge-link">
+            <img src="assets/cert_logos/aws_data_engineer_associate.png" alt="AWS Certified Data Engineer - Associate"
+              class="cert-badge" />
+          </a>
+          <div class="cert-info">
+            <div class="role-line">
+              <h3>
+                AWS Certified Data Engineer – Associate
+              </h3>
+              <span class="dates">October 2026</span>
             </div>
-          </div>
-
-          <div class="cert-card">
-            <a
-              href="https://www.credly.com/badges/b670a196-2b26-4c8d-aa65-305d0e5e29a3/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-badge-link"
-            >
-              <img
-                src="assets/cert_logos/aws_architect_associate.png"
-                alt="AWS Certified Solutions Architect - Associate"
-                class="cert-badge"
-              />
+            <p class="cert-meta">
+              Credential ID: 28e4ff5c-919e-4d6c-92fe-1f310cd7097b
+            </p>
+            <a href="https://www.credly.com/badges/28e4ff5c-919e-4d6c-92fe-1f310cd7097b/public_url" target="_blank"
+              rel="noopener noreferrer" class="verify-link">
+              Verify Credential &rarr;
             </a>
-            <div class="cert-info">
-              <div class="role-line">
-                <h3>
-                  AWS Certified Solutions Architect – Associate
-                </h3>
-                <span class="dates">February 2026</span>
-              </div>
-              <p class="cert-meta">
-                Credential ID: b670a196-2b26-4c8d-aa65-305d0e5e29a3
-              </p>
-              <a
-                href="https://www.credly.com/badges/b670a196-2b26-4c8d-aa65-305d0e5e29a3/public_url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="verify-link"
-              >
-                Verify Credential &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div class="cert-card">
-            <a
-              href="https://www.credly.com/badges/82320bb5-5e02-49f8-9e54-6132bb82a15a/public_url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-badge-link"
-            >
-              <img
-                src="assets/cert_logos/aws_practitioner_foundational.png"
-                alt="AWS Certified Cloud Practitioner - Foundational"
-                class="cert-badge"
-              />
-            </a>
-            <div class="cert-info">
-              <div class="role-line">
-                <h3>
-                  AWS Certified Cloud Practitioner – Foundational
-                </h3>
-                <span class="dates">January 2026</span>
-              </div>
-              <p class="cert-meta">
-                Credential ID: 82320bb5-5e02-49f8-9e54-6132bb82a15a
-              </p>
-              <a
-                href="https://www.credly.com/badges/82320bb5-5e02-49f8-9e54-6132bb82a15a/public_url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="verify-link"
-              >
-                Verify Credential &rarr;
-              </a>
-            </div>
           </div>
         </div>
-      </section>
 
-      <section id="experience">
-        <h2>Experience</h2>
-
-        <h3>Georgia-Pacific</h3>
-        <div class="role-line">
-          Senior Data Engineer
-          <span class="dates">Feb 2024 – Sept 2025</span>
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/b670a196-2b26-4c8d-aa65-305d0e5e29a3/public_url" target="_blank"
+            rel="noopener noreferrer" class="cert-badge-link">
+            <img src="assets/cert_logos/aws_architect_associate.png" alt="AWS Certified Solutions Architect - Associate"
+              class="cert-badge" />
+          </a>
+          <div class="cert-info">
+            <div class="role-line">
+              <h3>
+                AWS Certified Solutions Architect – Associate
+              </h3>
+              <span class="dates">February 2026</span>
+            </div>
+            <p class="cert-meta">
+              Credential ID: b670a196-2b26-4c8d-aa65-305d0e5e29a3
+            </p>
+            <a href="https://www.credly.com/badges/b670a196-2b26-4c8d-aa65-305d0e5e29a3/public_url" target="_blank"
+              rel="noopener noreferrer" class="verify-link">
+              Verify Credential &rarr;
+            </a>
+          </div>
         </div>
-        <!-- <ul>
+
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/82320bb5-5e02-49f8-9e54-6132bb82a15a/public_url" target="_blank"
+            rel="noopener noreferrer" class="cert-badge-link">
+            <img src="assets/cert_logos/aws_practitioner_foundational.png"
+              alt="AWS Certified Cloud Practitioner - Foundational" class="cert-badge" />
+          </a>
+          <div class="cert-info">
+            <div class="role-line">
+              <h3>
+                AWS Certified Cloud Practitioner – Foundational
+              </h3>
+              <span class="dates">January 2026</span>
+            </div>
+            <p class="cert-meta">
+              Credential ID: 82320bb5-5e02-49f8-9e54-6132bb82a15a
+            </p>
+            <a href="https://www.credly.com/badges/82320bb5-5e02-49f8-9e54-6132bb82a15a/public_url" target="_blank"
+              rel="noopener noreferrer" class="verify-link">
+              Verify Credential &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <h3>Georgia-Pacific</h3>
+      <div class="role-line">
+        Senior Data Engineer
+        <span class="dates">Feb 2024 – Sept 2025</span>
+      </div>
+      <!-- <ul>
           <li>
             Developed and maintained various pipelines to enable data movement
             from across the company into the shared enterprise data lake,
@@ -184,13 +153,13 @@
           </li>
         </ul> -->
 
-        <br/>
-        <h3>Worthix</h3>
-        <div class="role-line">
-          Software Engineer
-          <span class="dates">Oct 2022 – Jul 2023</span>
-        </div>
-        <!-- <ul>
+      <br />
+      <h3>Worthix</h3>
+      <div class="role-line">
+        Software Engineer
+        <span class="dates">Oct 2022 – Jul 2023</span>
+      </div>
+      <!-- <ul>
           <li>
             Worked on the CDC MVPS Portal Team, overseeing the validation,
             processing and distribution of state-level surveillance data to
@@ -210,59 +179,60 @@
           </li>
         </ul> -->
 
-        <br/>
-        <h3>Booz Allen Hamilton (via The Goal)</h3>
-        <div class="role-line">
-          Python Developer
-          <span class="dates">Oct 2021 – Oct 2022</span>
-        </div>
+      <br />
+      <h3>Booz Allen Hamilton (via The Goal)</h3>
+      <div class="role-line">
+        Python Developer
+        <span class="dates">Oct 2021 – Oct 2022</span>
+      </div>
 
-        <br/>
-        <h3>InductiveHealth Informatics</h3>
-        <div class="role-line">
-          Junior Software Developer
-          <span class="dates">Jan 2021 – Oct 2021</span>
-        </div>
+      <br />
+      <h3>InductiveHealth Informatics</h3>
+      <div class="role-line">
+        Junior Software Developer
+        <span class="dates">Jan 2021 – Oct 2021</span>
+      </div>
 
-        <br/>
-        <h3>Anthem (via Randstad)</h3>
-        <div class="role-line">
-          Junior Developer
-          <span class="dates">Apr 2020 – Dec 2020</span>
-        </div>
+      <br />
+      <h3>Anthem (via Randstad)</h3>
+      <div class="role-line">
+        Junior Developer
+        <span class="dates">Apr 2020 – Dec 2020</span>
+      </div>
 
-        <br/>
-        <h3>Psi Upsilon Fraternity</h3>
-        <div class="role-line">
-          Director of Chapter Services
-          <span class="dates">Apr 2019 – Oct 2019</span>
-        </div>
-        <div class="role-line">
-          Chapter Leadership Consultant
-          <span class="dates">May 2018 – Apr 2019</span>
-        </div>
-      </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <b>Programming Languages:</b> Python- pandas, Flask, FastAPI, Bash,
-          Java, SQL, Perl, C, HTML
-        </p>
-        <p><b>Tools: </b>Git, BitBucket, JIRA, Terraform</p>
-        <p>
-          <b>Amazon Web Services:</b> Glue, Lambda, S3, Step Functions,
-          EventBridge, Athena, EC2, DynamoDB, Redshift, SNS, SQS
-        </p>
-      </section>
-    </div>
-    <footer id="footer"></footer>
-    <script>
-      async function loadFooter() {
-        const res = await fetch("components/footer.html");
-        const html = await res.text();
-        document.getElementById("footer").innerHTML = html;
-      }
-      loadFooter();
-    </script>
-  </body>
+      <br />
+      <h3>Psi Upsilon Fraternity</h3>
+      <div class="role-line">
+        Director of Chapter Services
+        <span class="dates">Apr 2019 – Oct 2019</span>
+      </div>
+      <div class="role-line">
+        Chapter Leadership Consultant
+        <span class="dates">May 2018 – Apr 2019</span>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>
+        <b>Programming Languages:</b> Python- pandas, Flask, FastAPI, Bash,
+        Java, SQL, Perl, C, HTML
+      </p>
+      <p><b>Tools: </b>Git, BitBucket, JIRA, Terraform</p>
+      <p>
+        <b>Amazon Web Services:</b> Glue, Lambda, S3, Step Functions,
+        EventBridge, Athena, EC2, DynamoDB, Redshift, SNS, SQS
+      </p>
+    </section>
+  </div>
+  <footer id="footer"></footer>
+  <script>
+    async function loadFooter() {
+      const res = await fetch("components/footer.html");
+      const html = await res.text();
+      document.getElementById("footer").innerHTML = html;
+    }
+    loadFooter();
+  </script>
+</body>
+
 </html>
