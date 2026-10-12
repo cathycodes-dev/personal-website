@@ -24,23 +24,37 @@
     nav.classList.toggle("nav-open");
   }
 </script>
+<main class="container projects-wrapper">
+  <h1>Projects</h1>
 
-<h1>PAGE IN DEVELOPMENT</h1>
+  <div class="projects-grid">
+    <!-- Dice Game Card -->
+    <article class="project-card">
+      <div class="card-content">
+        <h2>Dice Game</h2>
+        <p>A fun dice game you can play online powered by Pyodide and WebAssembly.</p>
+      </div>
+      <a class="btn" href="https://dice-game.cathycodes.com" target="_blank" rel="noopener">Play the Dice Game</a>
+      </article>
 
-<body>
-  <main class="container projects-wrapper">
-    <a class="btn" href="https://dice-game.cathycodes.com" target="_blank" rel="noopener">Play the Dice Game</a>
-     <a class="btn" href="https://www.cathycodes.com" target="_blank" rel="noopener">Home Page</a>
-  </main>
-<footer id="footer"></footer>
-<script>
-  async function loadFooter() {
-    const res = await fetch("components/footer.html");
-    const html = await res.text();
-    document.getElementById("footer").innerHTML = html;
-  }
-  loadFooter();
-</script>
-</body>
+      <!-- Placeholder Card -->
+      <article class="project-card coming-soon">
+        <h3>More Projects Coming Soon</h3>
+        <p>Stay tuned for future apps and projects.</p>
+      </article>
+  </div>
+</main>
+
+<footer id="footer">
+  <script>
+    async function loadFooter() {
+      const res = await fetch("components/footer.html");
+      const html = await res.text();
+      document.getElementById("footer").innerHTML = html;
+    }
+    loadFooter();
+  </script>
+</footer>
+
 
 </html>
